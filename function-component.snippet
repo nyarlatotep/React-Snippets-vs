@@ -1,0 +1,50 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>Stateless Function Component</Title>
+    <Author>Daniel Crespo</Author>
+    <Shortcut>function-component</Shortcut>
+    <Description>Basic structure of a React stateless function component</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>Nombre del componente</ToolTip>
+        <Default>MyFnComponent</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+    <![CDATA[
+    function MyFnComponent ( props ) {
+	// Something to do. For example:
+
+	const myArray = [
+		{ key: 1, anything: 'example1', something: 'my example' },
+		{ key: 2, anything: 'example2', something: 'my example2' },
+		{ key: 3, anything: 'example3', something: 'my example3' }
+	];
+	// or whatever you need 
+
+	return (
+		<ul style={ props.style }>
+			{
+				myArray.map( value => {
+					return (
+						<li key={ value.key } id={ value.anything } >
+							{ value.something }
+						</li>
+					)
+				} )
+			}
+		</ul>
+	);
+      $selected$$end$
+}
+]]>
+</Code>
+  </Snippet>
+</CodeSnippet>
