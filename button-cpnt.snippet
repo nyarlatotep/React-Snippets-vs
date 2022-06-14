@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding ="utf-8" standalone="yes"?>
+<!DOCTYPE CodeSnippet>
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<Header>
+		<Title>Button Component</Title>
+		<Author>Daniel Crespo</Author>
+		<Shortcut>btn</Shortcut>
+		<Description>Basic button component, ready to use</Description>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+		<HelpUrl>
+		</HelpUrl>
+	</Header>
+	<Snippet>
+		<Imports>
+			<Import>
+				<Namespace>react</Namespace>
+			</Import>
+		</Imports>
+		<Declarations>
+			<Literal Editable="true">
+				<Type>custom</Type>
+				<ID>btn</ID>
+				<ToolTip>Button name</ToolTip>
+				<Default>Button</Default>
+			</Literal>
+			<Literal Editable="true">
+				<ID>type</ID>
+				<Type>string</Type>
+				<ToolTip>Button type: 'button' (default), 'submit', 'reset'</ToolTip>
+				<Default>button</Default>
+			</Literal>
+		</Declarations>
+		<Code Kind="function" Language="JavaScript" Delimiter="$">
+			<![CDATA[
+    function $btn$( props ) {
+			return (
+				<button
+					id='mybtn'
+					name='my btn component'
+					type='$type$'
+					{ ...props } />
+			);
+    $selected$$end$
+}
+]]>
+		</Code>
+	</Snippet>
+</CodeSnippet>
