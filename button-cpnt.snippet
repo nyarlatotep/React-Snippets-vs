@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding ="utf-8" standalone="yes"?>
-<!DOCTYPE CodeSnippet>
+<?xml version="1.0" encoding ="utf-8"?>
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<Header>
 		<Title>Button Component</Title>
@@ -9,30 +8,21 @@
 		<SnippetTypes>
 			<SnippetType>Expansion</SnippetType>
 		</SnippetTypes>
-		<HelpUrl>
-		</HelpUrl>
 	</Header>
 	<Snippet>
-		<Imports>
-			<Import>
-				<Namespace>react</Namespace>
-			</Import>
-		</Imports>
 		<Declarations>
 			<Literal Editable="true">
-				<Type>custom</Type>
 				<ID>btn</ID>
 				<ToolTip>Button name</ToolTip>
 				<Default>Button</Default>
 			</Literal>
 			<Literal Editable="true">
 				<ID>type</ID>
-				<Type>string</Type>
 				<ToolTip>Button type: 'button' (default), 'submit', 'reset'</ToolTip>
 				<Default>button</Default>
 			</Literal>
 		</Declarations>
-		<Code Kind="function" Language="JavaScript" Delimiter="$">
+		<Code Language="JavaScript" Delimiter="$">
 			<![CDATA[
     function $btn$( props ) {
 			return (
@@ -42,8 +32,9 @@
 					type='$type$'
 					{ ...props } />
 			);
-    $selected$$end$
+    $selected$
 }
+$end$
 ]]>
 		</Code>
 	</Snippet>

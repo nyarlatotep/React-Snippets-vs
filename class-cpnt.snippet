@@ -1,24 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-  <Header>
-    <Title>Class Component</Title>
-    <Author>Daniel Crespo</Author>
-    <Shortcut>class-component</Shortcut>
-    <Description>Estructura básica de un componente clase de React.js.</Description>
-    <SnippetTypes>
-      <SnippetType>Expansion</SnippetType>
-      <SnippetType>SurroundsWith</SnippetType>
-    </SnippetTypes>
-  </Header>
-  <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>name</ID>
-        <ToolTip>Nombre del componente</ToolTip>
-        <Default>MyComponent</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="JavaScript">
-    <![CDATA[
+	<Header>
+		<Title>Class Component</Title>
+		<Author>Daniel Crespo</Author>
+		<Shortcut>classCpnt</Shortcut>
+		<Description>Basic structure of React.js class component.</Description>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal Editable="true">
+				<ID>name</ID>
+				<ToolTip>Nombre del componente</ToolTip>
+				<Default>MyComponent</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="JavaScript" Delimiter="$">
+			<![CDATA[
     import { Component } from 'react';
 
     export class $name$ extends Component {
@@ -47,9 +47,10 @@
         </>
       );
     };
-    $selected$$end$
+    $selected$
 }
+$end$
 ]]>
-</Code>
-  </Snippet>
+		</Code>
+	</Snippet>
 </CodeSnippet>

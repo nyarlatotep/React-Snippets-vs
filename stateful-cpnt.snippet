@@ -1,24 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-  <Header>
-    <Title>Stateful Function Component</Title>
-    <Author>Daniel Crespo</Author>
-    <Shortcut>stateful-component</Shortcut>
-    <Description>Basic structure of a React stateful function component or use of hooks</Description>
-    <SnippetTypes>
-      <SnippetType>Expansion</SnippetType>
-      <SnippetType>SurroundsWith</SnippetType>
-    </SnippetTypes>
-  </Header>
-  <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>name</ID>
-        <ToolTip>Component Name</ToolTip>
-        <Default>MyHookComponent</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="JavaScript">
-    <![CDATA[
+	<Header>
+		<Title>Stateful Function Component</Title>
+		<Keywords>
+			<Keyword>hook</Keyword>
+			<Keyword>useState</Keyword>
+			<Keyword>useEffect</Keyword>
+		</Keywords>
+		<Author>Daniel Crespo</Author>
+		<Shortcut>stateful</Shortcut>
+		<Description>Basic structure of a React stateful function component or use of hooks</Description>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal Editable="true">
+				<ID>name</ID>
+				<ToolTip>Component Name</ToolTip>
+				<Default>StatefulComponent</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="JavaScript" Delimiter="$">
+			<![CDATA[
     import { useState, useEffect } from 'react';
 
     function $name$( props ) {
@@ -39,10 +44,12 @@
             name='myButton'
             onClick={ () => setCount( count + 1 ) }
             value={ props.value } />
+				</div>
       );
-      $selected$$end$
+      $selected$
 }
+$end$
 ]]>
-</Code>
-  </Snippet>
+		</Code>
+	</Snippet>
 </CodeSnippet>

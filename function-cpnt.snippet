@@ -1,48 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
 <CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
-  <Header>
-    <Title>Stateful Function Component</Title>
-    <Author>Daniel Crespo</Author>
-    <Shortcut>stateful-component</Shortcut>
-    <Description>Basic structure of a React stateful function component or use of hooks</Description>
-    <SnippetTypes>
-      <SnippetType>Expansion</SnippetType>
-      <SnippetType>SurroundsWith</SnippetType>
-    </SnippetTypes>
-  </Header>
-  <Snippet>
-    <Declarations>
-      <Literal>
-        <ID>name</ID>
-        <ToolTip>Component Name</ToolTip>
-        <Default>MyHookComponent</Default>
-      </Literal>
-    </Declarations>
-    <Code Language="JavaScript">
-    <![CDATA[
-    import { useState, useEffect } from 'react';
-
+	<Header>
+		<Title>Stateless Function Component</Title>
+		<Author>Daniel Crespo</Author>
+		<Shortcut>fnCpnt</Shortcut>
+		<Description>Basic structure of a React stateless function component or use of hooks</Description>
+		<Keywords>
+			<Keyword>stateless</Keyword>
+			<Keyword>functionComponent</Keyword>
+		</Keywords>
+		<SnippetTypes>
+			<SnippetType>Expansion</SnippetType>
+		</SnippetTypes>
+	</Header>
+	<Snippet>
+		<Declarations>
+			<Literal Editable="true">
+				<ID>name</ID>
+				<ToolTip>Component Name</ToolTip>
+				<Default>FnComponent</Default>
+			</Literal>
+		</Declarations>
+		<Code Language="JavaScript" Delimiter="$">
+			<![CDATA[
     function $name$( props ) {
-      const [ count, setCount ] = useState( 0 );
-      
-      useEffect( () => {
-        // Something that you would use in a class component lifecycle
-        // componentDidMount(), 
-        // componentDidUpdate(), 
-        // componentWillUnmount()
-        alert( 'Number of clicks: ' + count );
-      } );
-
+      // Anything that you need to do. For Example:
+			const myArray = [
+				{ key: 1, anything: 'example1', description: 'description1' },
+				{ key: 2, anything: 'example2', description: 'description2' },
+				{ key: 3, anything: 'example3', description: 'description3' },
+			];
+			// or whatever you want.
       return (
-        <div>
-          <p>Simple Hook example</p>
-          <input type='button'
-            name='myButton'
-            onClick={ () => setCount( count + 1 ) }
-            value={ props.value } />
+        <ul>
+					{ 
+						myArray.map( value => {
+							return (
+								<li key={ value.key } id={ value.anything } >
+									{ value.description }
+								</li>
+							) 
+					}
+				</ul>
       );
-      $selected$$end$
+      $selected$
 }
+$end$
 ]]>
-</Code>
-  </Snippet>
+		</Code>
+	</Snippet>
 </CodeSnippet>
